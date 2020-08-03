@@ -82,6 +82,7 @@ function refresh(estimatedVerbType) {
     if (word.length < 2)
         return;
     //判断动词类型
+    //0:unknown，1：くる，2：する，3：う，4：る
     if (estimatedVerbType == 0) {
         if (word == 'くる' || word == '来る')
             estimatedVerbType = 1
@@ -389,7 +390,7 @@ function refresh(estimatedVerbType) {
             words[18].innerText = 'くれられません'
             words[19].innerText = 'くれられました'
             words[20].innerText = 'くれられませんでした'
-            words[21].innerText = 'くれ' + convertKana(word[word.length - 1], 'u', 'e') + 'ば'
+            words[21].innerText = 'くれれば'
             words[22].innerText = 'くれなければ'
             words[23].innerText = 'くれろう'
             words[24].innerText = 'くれましょう'
