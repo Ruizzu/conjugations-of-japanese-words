@@ -1,90 +1,16 @@
 function getVowel(kana) {
     if (kana.length != 1)
         console.error('This is a wrong length.')
-    if (
-        kana == 'あ' ||
-        kana == 'か' ||
-        kana == 'さ' ||
-        kana == 'た' ||
-        kana == 'な' ||
-        kana == 'は' ||
-        kana == 'ま' ||
-        kana == 'や' ||
-        kana == 'ら' ||
-        kana == 'わ' ||
-        kana == 'が' ||
-        kana == 'ざ' ||
-        kana == 'だ' ||
-        kana == 'ば' ||
-        kana == 'ぱ'
-    ) return 'a'
-
-    else if (
-        kana == 'い' ||
-        kana == 'き' ||
-        kana == 'し' ||
-        kana == 'ち' ||
-        kana == 'に' ||
-        kana == 'ひ' ||
-        kana == 'み' ||
-        kana == 'り' ||
-        kana == 'ぎ' ||
-        kana == 'じ' ||
-        kana == 'ぢ' ||
-        kana == 'び' ||
-        kana == 'ぴ'
-    ) return 'i'
-
-    else if (
-        kana == 'う' ||
-        kana == 'く' ||
-        kana == 'す' ||
-        kana == 'つ' ||
-        kana == 'ぬ' ||
-        kana == 'ふ' ||
-        kana == 'む' ||
-        kana == 'ゆ' ||
-        kana == 'る' ||
-        kana == 'ぐ' ||
-        kana == 'ず' ||
-        kana == 'づ' ||
-        kana == 'ぶ' ||
-        kana == 'ぷ'
-    ) return 'u'
-
-    else if (
-        kana == 'え' ||
-        kana == 'け' ||
-        kana == 'せ' ||
-        kana == 'て' ||
-        kana == 'ね' ||
-        kana == 'へ' ||
-        kana == 'め' ||
-        kana == 'れ' ||
-        kana == 'げ' ||
-        kana == 'ぜ' ||
-        kana == 'で' ||
-        kana == 'べ' ||
-        kana == 'ぺ'
-    ) return 'e'
-
-    else if (
-        kana == 'お' ||
-        kana == 'こ' ||
-        kana == 'そ' ||
-        kana == 'と' ||
-        kana == 'の' ||
-        kana == 'ほ' ||
-        kana == 'も' ||
-        kana == 'よ' ||
-        kana == 'ろ' ||
-        kana == 'ご' ||
-        kana == 'ぞ' ||
-        kana == 'ど' ||
-        kana == 'ぼ' ||
-        kana == 'ぽ'
-    ) return 'o'
-
+    if ('あかさたなはまやらわがざだばぱ'.indexOf(kana) != -1)
+        return 'a'
+    else if ('いきしちにひみりぎじぢびぴ'.indexOf(kana) != -1)
+        return 'i'
+    else if ('うくすつぬふむゆるぐずづぶぷ'.indexOf(kana) != -1)
+        return 'u'
+    else if ('えけせてねへめれげぜでべぺ'.indexOf(kana) != -1)
+        return 'e'
+    else if ('おこそとのほもよろごぞどぼぽ'.indexOf(kana) != -1)
+        return 'o'
     else
         console.error('It is not a right kana.')
 }
@@ -153,7 +79,7 @@ function convertKana(kana, oldVowel, newVowel) {
     }
 }
 function refresh(estimatedVerbType) {
-    if(word.length < 2)
+    if (word.length < 2)
         return;
     //判断动词类型
     if (estimatedVerbType == 0) {
