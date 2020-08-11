@@ -19,20 +19,20 @@ function isGodan(word) {
         word == '要る' ||
         word == '焦る' ||
         word == '帰る' ||
-        word == '限る' ||
         word == '切る' ||
         word == '蹴る' ||
         word == '滑る' ||
-        word == '知る' ||
         word == '握る' ||
         word == '捻る' ||
-        word == '入る' ||
         word == '練る' ||
-        word == '走る' ||
-        word == '参る' ||
         word == '減る' ||
-        word == '滅入る' ||
-        word == '交じる' ||
+        word == '知る' || word == 'しる' ||
+        word == '限る' || word == 'かぎる' ||
+        word == '入る' || word == 'はいる' ||
+        word == '走る' || word == 'はしる' ||
+        word == '参る' || word == 'まいる' ||
+        word == '滅入る' || word == 'めいる' ||
+        word == '交じる' || word == '混じる' || word == 'まじる' ||
         word == '嘲る' || word == 'あざける' ||
         word == '遮る' || word == 'さえぎる' ||
         word == '喋る' || word == 'しゃべる' ||
